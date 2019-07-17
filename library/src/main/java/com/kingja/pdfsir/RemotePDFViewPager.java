@@ -63,7 +63,6 @@ public class RemotePDFViewPager extends ViewPager implements DownloadFile.Listen
     }
 
     private void init(DownloadFile downloadFile, String pdfUrl) {
-        //设置viewpage的切换动画,这里设置才能真正实现垂直滑动的viewpager
         setPageTransformer(true, new DefaultTransformer());
         setDownloader(downloadFile);
         downloadFile.download(pdfUrl,

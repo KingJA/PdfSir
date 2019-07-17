@@ -117,10 +117,6 @@ public class RemotePDFViewPager extends ViewPager implements DownloadFile.Listen
 //            return false;
 //        }
 //    }
-    /**
-     * 拦截touch事件
-     * @param ev 获取事件类型的封装类MotionEvent
-     */
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         boolean intercept = super.onInterceptTouchEvent(swapEvent(ev));
@@ -129,37 +125,21 @@ public class RemotePDFViewPager extends ViewPager implements DownloadFile.Listen
     }
 
 
-    /**
-     * 触摸点击触发该方法
-     * @param ev 获取事件类型的封装类MotionEvent
-     */
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         return super.onTouchEvent(swapEvent(ev));
     }
 
-    /**
-     * 交换x轴和y轴的移动距离
-     * @param event 获取事件类型的封装类MotionEvent
-     */
     private MotionEvent swapEvent(MotionEvent event) {
-        //获取宽高
         float width = getWidth();
         float height = getHeight();
-        //将Y轴的移动距离转变成X轴的移动距离
         float swappedX = (event.getY() / height) * width;
-        //将X轴的移动距离转变成Y轴的移动距离
         float swappedY = (event.getX() / width) * height;
-        //重设event的位置
         event.setLocation(swappedX, swappedY);
         return event;
     }
 
 
-    /**
-     * 自定义 ViewPager 切换动画
-     * 如果不设置切换动画，还会是水平方向的动画
-     */
     public class DefaultTransformer implements ViewPager.PageTransformer {
         public static final String TAG = "simple";
 

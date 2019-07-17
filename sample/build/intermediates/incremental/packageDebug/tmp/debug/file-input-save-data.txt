@@ -1,0 +1,19 @@
+#Internal package file, do not edit.
+#Wed Jul 17 11:38:52 CST 2019
+1.base=H\:\\android\\apps\\PdfSir\\sample\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+2.path=classes.dex
+0.baseType=DIRECTORY
+3.baseType=DIRECTORY
+2.base=H\:\\android\\apps\\PdfSir\\sample\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+3.set=ASSET
+2.set=DEX
+1.baseType=DIRECTORY
+3.path=sample.pdf
+count=4
+1.set=ASSET
+0.path=adobe.pdf
+3.base=H\:\\android\\apps\\PdfSir\\sample\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+0.set=ASSET
+0.base=H\:\\android\\apps\\PdfSir\\sample\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+2.baseType=DIRECTORY
+1.path=moby.pdf

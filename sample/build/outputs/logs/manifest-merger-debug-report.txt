@@ -1,0 +1,150 @@
+-- Merging decision tree log ---
+manifest
+ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:2:1-27:12
+MERGED from [:library] H:\android\apps\PdfSir\library\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-18:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\a48f5a23d207db31e15dbf30956a46c6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\55ad156b0acf3ab0bfb59261f3e5954a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\2cba2689ee2411bc6014d82354c0603f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\158fdfbb9c1eb06bef34f9eafe222d8d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\a755e005b2a160be614bfa48c56aafc5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\e839e9de0420f2c628ad468e549cf1d5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\3a6329763774ec8072a46e4cc79714f3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.davemorrissey.labs:subsampling-scale-image-view:3.10.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\subsampling-scale-image-view-3.10.0.aar\05c33346e95927918a9f6573acf4f506\AndroidManifest.xml:2:1-11:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\564e067ad2fb6c6a5c3f89db01c6a3df\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\df8e4bd9584dcd0776b134d5b1d58d6a\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\cb5940ea10b4e299935665ec8b29ffa7\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\efa09a68e94c800414cddb0b0809fc1c\AndroidManifest.xml:17:1-22:12
+INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:2:1-27:12
+	package
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:3:7-40
+		INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml
+		INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:5:7-32
+		INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml
+		INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:4:7-30
+		INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml
+		INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:7:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:8:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:9:22-77
+application
+ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:11:5-26:19
+MERGED from [:library] H:\android\apps\PdfSir\library\build\intermediates\manifests\full\debug\AndroidManifest.xml:11:5-16:19
+MERGED from [:library] H:\android\apps\PdfSir\library\build\intermediates\manifests\full\debug\AndroidManifest.xml:11:5-16:19
+	android:label
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:11:18-50
+	android:name
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:12:18-71
+activity#sample.kingja.pdfsir.MainActivity
+ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:13:9-20:20
+	android:label
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:14:19-51
+	android:theme
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:15:19-82
+	android:name
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:13:19-67
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:16:13-19:29
+action#android.intent.action.MAIN
+ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:17:17-69
+	android:name
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:17:25-66
+category#android.intent.category.LAUNCHER
+ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:18:17-77
+	android:name
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:18:27-74
+activity#sample.kingja.pdfsir.AssetOnXMLActivity
+ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:21:9-139
+	android:theme
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:21:74-137
+	android:name
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:21:19-73
+activity#sample.kingja.pdfsir.AssetOnSDActivity
+ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:22:9-138
+	android:theme
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:22:73-136
+	android:name
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:22:19-72
+activity#sample.kingja.pdfsir.RemotePDFActivity
+ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:23:9-138
+	android:theme
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:23:73-136
+	android:name
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:23:19-72
+activity#sample.kingja.pdfsir.ZoomablePDFActivityPhotoView
+ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:24:9-149
+	android:theme
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:24:84-147
+	android:name
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:24:19-83
+activity#sample.kingja.pdfsir.PDFWithScaleActivity
+ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:25:9-141
+	android:theme
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:25:76-139
+	android:name
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml:25:19-75
+uses-sdk
+INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml
+INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml
+MERGED from [:library] H:\android\apps\PdfSir\library\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:library] H:\android\apps\PdfSir\library\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\a48f5a23d207db31e15dbf30956a46c6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\a48f5a23d207db31e15dbf30956a46c6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\55ad156b0acf3ab0bfb59261f3e5954a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\55ad156b0acf3ab0bfb59261f3e5954a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\2cba2689ee2411bc6014d82354c0603f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\2cba2689ee2411bc6014d82354c0603f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\158fdfbb9c1eb06bef34f9eafe222d8d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\158fdfbb9c1eb06bef34f9eafe222d8d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\a755e005b2a160be614bfa48c56aafc5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\a755e005b2a160be614bfa48c56aafc5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\e839e9de0420f2c628ad468e549cf1d5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\e839e9de0420f2c628ad468e549cf1d5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\3a6329763774ec8072a46e4cc79714f3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\3a6329763774ec8072a46e4cc79714f3\AndroidManifest.xml:20:5-44
+MERGED from [com.davemorrissey.labs:subsampling-scale-image-view:3.10.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\subsampling-scale-image-view-3.10.0.aar\05c33346e95927918a9f6573acf4f506\AndroidManifest.xml:7:5-9:41
+MERGED from [com.davemorrissey.labs:subsampling-scale-image-view:3.10.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\subsampling-scale-image-view-3.10.0.aar\05c33346e95927918a9f6573acf4f506\AndroidManifest.xml:7:5-9:41
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\564e067ad2fb6c6a5c3f89db01c6a3df\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\564e067ad2fb6c6a5c3f89db01c6a3df\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\df8e4bd9584dcd0776b134d5b1d58d6a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\df8e4bd9584dcd0776b134d5b1d58d6a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\cb5940ea10b4e299935665ec8b29ffa7\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\cb5940ea10b4e299935665ec8b29ffa7\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\efa09a68e94c800414cddb0b0809fc1c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\efa09a68e94c800414cddb0b0809fc1c\AndroidManifest.xml:20:5-44
+INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml
+INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml
+		INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml
+		ADDED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml
+		INJECTED from H:\android\apps\PdfSir\sample\src\main\AndroidManifest.xml
+service#com.kingja.pdfsir.service.CopyAssetService
+ADDED from [:library] H:\android\apps\PdfSir\library\build\intermediates\manifests\full\debug\AndroidManifest.xml:12:9-15:19
+	android:exported
+		ADDED from [:library] H:\android\apps\PdfSir\library\build\intermediates\manifests\full\debug\AndroidManifest.xml:14:13-37
+	android:name
+		ADDED from [:library] H:\android\apps\PdfSir\library\build\intermediates\manifests\full\debug\AndroidManifest.xml:13:13-70

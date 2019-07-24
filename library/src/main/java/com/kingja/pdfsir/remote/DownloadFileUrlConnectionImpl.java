@@ -31,7 +31,7 @@ public class DownloadFileUrlConnectionImpl implements DownloadFile {
     private static final int KILOBYTE = 1024;
 
     private static final int BUFFER_LEN = 1 * KILOBYTE;
-    private static final int NOTIFY_PERIOD = 150 * KILOBYTE;
+    private static final int NOTIFY_PERIOD = 10 * KILOBYTE;
 
     Context context;
     Handler uiThread;
@@ -70,7 +70,9 @@ public class DownloadFileUrlConnectionImpl implements DownloadFile {
                             counter = 0;
                         }
                     }
-
+                    if (listener != null) {
+                        notifyProgressOnUiThread(totalSize, totalSize);
+                    }
                     urlConnection.disconnect();
                     fileOutput.close();
 

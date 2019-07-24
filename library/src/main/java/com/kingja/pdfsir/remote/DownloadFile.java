@@ -19,10 +19,16 @@ public interface DownloadFile {
     void download(String url, String destinationPath);
 
     interface Listener {
-        void onSuccess(String url, String destinationPath);
+        default void onSuccess(String url, String destinationPath) {
+        }
 
-        void onFailure(Exception e);
+        default void onFailure(Exception e) {
+        }
 
-        void onProgressUpdate(int progress, int total);
+        default void onProgressUpdate(int progress, int total) {
+        }
+
+        default void onSuccess(String url, String destinationPath, int totalPages) {
+        }
     }
 }

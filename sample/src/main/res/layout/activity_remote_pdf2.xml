@@ -26,5 +26,9 @@
         android:text="1/2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+    <com.kingja.pdfsir.NewRemotePDFViewPager
+        android:id="@+id/prdView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>
 

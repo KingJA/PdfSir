@@ -38,7 +38,7 @@ publish {
     artifactId = 'pdfsir'
     userOrg = 'kingja'
     groupId = 'com.kingja.pdfsir'
-    publishVersion = '1.1.1'
+    publishVersion = '1.1.2'
     desc = 'PDF reader for Android,for Sir'
     website = 'https://github.com/KingJA/PdfSir'
 }

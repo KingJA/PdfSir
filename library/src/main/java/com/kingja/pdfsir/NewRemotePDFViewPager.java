@@ -19,9 +19,10 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Handler;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -36,6 +37,7 @@ import es.voghdev.pdfviewpager.library.R;
 
 
 public class NewRemotePDFViewPager extends ViewPager implements DownloadFile.Listener {
+    private static final String TAG = "NewRemotePDFViewPager";
     protected Context context;
     protected DownloadFile downloadFile;
     protected DownloadFile.Listener listener;
@@ -58,12 +60,19 @@ public class NewRemotePDFViewPager extends ViewPager implements DownloadFile.Lis
         super(context, attrs);
         initNewRemotePDFViewPager();
     }
-
+    private GestureDetector mGestureDetector;
     private void initNewRemotePDFViewPager() {
         setPageTransformer(true, new DefaultTransformer());
         initDownloader(new DownloadFileUrlConnectionImpl(context, new Handler(), this));
+        mGestureDetector = new GestureDetector(getContext(), new YScrollDetector());
     }
-
+    class YScrollDetector extends GestureDetector.SimpleOnGestureListener {
+        @Override
+        public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+            Log.e(TAG, "onScroll: "+(Math.abs(distanceY) > Math.abs(distanceX) ));
+            return Math.abs(distanceY) > Math.abs(distanceX);
+        }
+    }
     private void initDownloader(DownloadFileUrlConnectionImpl downloadFile) {
         this.downloadFile = downloadFile;
     }
@@ -153,6 +162,7 @@ public class NewRemotePDFViewPager extends ViewPager implements DownloadFile.Lis
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         boolean intercept = super.onInterceptTouchEvent(swapEvent(ev));
+//        boolean intercept =mGestureDetector.onTouchEvent(ev)&& super.onInterceptTouchEvent(swapEvent(ev)) ;
         swapEvent(ev);
         return intercept;
     }

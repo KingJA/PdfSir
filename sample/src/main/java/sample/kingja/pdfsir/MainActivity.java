@@ -64,7 +64,8 @@ public class MainActivity extends BaseSampleActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_sample2) {
-            RemotePDFActivity.open(this);
+//            NewRemotePDFActivity2.open(this);
+            ViewPagerRemotePDFActivity.open(this);
             return false;
         } else if (id == R.id.action_sample3) {
             AssetOnSDActivity.open(this);

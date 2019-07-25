@@ -90,39 +90,11 @@ public class NewRemotePDFViewPager extends ViewPager implements DownloadFile.Lis
                 .getAbsolutePath());
     }
 
-
-    public NewRemotePDFViewPager(Context context,
-                                 DownloadFile downloadFile,
-                                 String pdfUrl,
-                                 DownloadFile.Listener listener) {
-        super(context);
-        this.context = context;
-        this.listener = listener;
-
-        init(downloadFile, pdfUrl);
-    }
-
-
     private void init(DownloadFile downloadFile, String pdfUrl) {
         setPageTransformer(true, new DefaultTransformer());
         setDownloader(downloadFile);
         downloadFile.download(pdfUrl,
                 new File(context.getCacheDir(), FileUtil.extractFileNameFromURL(pdfUrl)).getAbsolutePath());
-    }
-
-    private void init(AttributeSet attrs) {
-        if (attrs != null) {
-            TypedArray a;
-
-            a = context.obtainStyledAttributes(attrs, R.styleable.PDFViewPager);
-            String pdfUrl = a.getString(R.styleable.PDFViewPager_pdfUrl);
-
-            if (pdfUrl != null && pdfUrl.length() > 0) {
-                init(new DownloadFileUrlConnectionImpl(context, new Handler(), this), pdfUrl);
-            }
-
-            a.recycle();
-        }
     }
 
     private void setDownloader(DownloadFile downloadFile) {
@@ -146,23 +118,9 @@ public class NewRemotePDFViewPager extends ViewPager implements DownloadFile.Lis
         listener.onProgressUpdate(progress, total);
     }
 
-    /**
-     * PDFViewPager uses PhotoView, so this bugfix should be added
-     * Issue explained in https://github.com/chrisbanes/PhotoView
-     */
-//    @Override
-//    public boolean onInterceptTouchEvent(MotionEvent ev) {
-//        try {
-//            return super.onInterceptTouchEvent(ev);
-//        } catch (IllegalArgumentException e) {
-//            e.printStackTrace();
-//            return false;
-//        }
-//    }
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         boolean intercept = super.onInterceptTouchEvent(swapEvent(ev));
-//        boolean intercept =mGestureDetector.onTouchEvent(ev)&& super.onInterceptTouchEvent(swapEvent(ev)) ;
         swapEvent(ev);
         return intercept;
     }

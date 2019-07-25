@@ -30,7 +30,7 @@ import es.voghdev.pdfviewpager.R;
  * Author:KingJA
  * Email:kingjavip@gmail.com
  */
-public class ViewPagerRemotePDFActivity extends AppCompatActivity {
+public class ViewPagerActivity extends AppCompatActivity {
 
     private static final String TAG = "RemotePDFActivity";
 
@@ -62,52 +62,12 @@ public class ViewPagerRemotePDFActivity extends AppCompatActivity {
 
         public PdfPagerAdapter(Context context, List<String> urlList) {
             for (int i = 0; i < urlList.size(); i++) {
-                previewViewMap.put(i, getPdfRootView(context,urlList.get(i)));
+                TextView textView = new TextView(context);
+                textView.setText("iTEM"+i);
+                previewViewMap.put(i, textView);
             }
         }
 
-        private View getPdfRootView(Context context, String url) {
-            View rootView = View.inflate(context, R.layout.layout_pdf, null);
-            TextView tv_tip = rootView.findViewById(R.id.tv_tip);
-            TextView tvPage = rootView.findViewById(R.id.tv_page);
-            LinearLayout ssll_download = rootView.findViewById(R.id.ssll_download);
-            ssll_download.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    NewRemotePDFViewPager remotePDFViewPager = rootView.findViewById(R.id.pdfView);
-                    remotePDFViewPager.setUrl(url);
-                    remotePDFViewPager.setDownloadFileListener(new DownloadFile.Listener() {
-                        @Override
-                        public void onSuccess(String url, String destinationPath, int totalPage) {
-                            remotePDFViewPager.setVisibility(View.VISIBLE);
-                            ssll_download.setVisibility(View.GONE);
-                            tvPage.setVisibility(View.VISIBLE);
-                            tvPage.setText(String.format("%d/%d", 1, totalPage));
-                        }
-
-                        @Override
-                        public void onFailure(Exception e) {
-                            tv_tip.setText("文件下载失败");
-                        }
-
-                        @Override
-                        public void onProgressUpdate(int progress, int total) {
-                            tv_tip.setText(String.format("%d/%d", progress, total));
-                        }
-                    });
-                    remotePDFViewPager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
-                        @Override
-                        public void onPageSelected(int position) {
-//                            tvPage.setText(String.format("%d/%d", position + 1, totalPage));
-                            Log.e(TAG, "onPageSelected: "+position );
-                        }
-                    });
-                    remotePDFViewPager.start();
-                }
-            });
-
-            return rootView;
-        }
 
         @Override
         public int getCount() {
@@ -143,7 +103,7 @@ public class ViewPagerRemotePDFActivity extends AppCompatActivity {
     }
 
     public static void open(Context context) {
-        Intent i = new Intent(context, ViewPagerRemotePDFActivity.class);
+        Intent i = new Intent(context, ViewPagerActivity.class);
         context.startActivity(i);
     }
 }

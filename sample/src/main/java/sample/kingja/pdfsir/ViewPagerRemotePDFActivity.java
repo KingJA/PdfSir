@@ -71,9 +71,11 @@ public class ViewPagerRemotePDFActivity extends AppCompatActivity {
             TextView tv_tip = rootView.findViewById(R.id.tv_tip);
             TextView tvPage = rootView.findViewById(R.id.tv_page);
             LinearLayout ssll_download = rootView.findViewById(R.id.ssll_download);
+            LinearLayout ll_pdfView = rootView.findViewById(R.id.ll_pdfView);
             ssll_download.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    ll_pdfView.setVisibility(View.VISIBLE);
                     NewRemotePDFViewPager remotePDFViewPager = rootView.findViewById(R.id.pdfView);
                     remotePDFViewPager.setUrl(url);
                     remotePDFViewPager.setDownloadFileListener(new DownloadFile.Listener() {

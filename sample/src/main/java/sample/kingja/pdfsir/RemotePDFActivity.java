@@ -118,7 +118,6 @@ public class RemotePDFActivity extends BaseSampleActivity implements DownloadFil
 
             @Override
             public void onPageSelected(int position) {
-                Log.e(TAG, "onPageSelected: " +position);
             }
 
             @Override

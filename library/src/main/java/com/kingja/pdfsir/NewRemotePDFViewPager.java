@@ -60,19 +60,15 @@ public class NewRemotePDFViewPager extends ViewPager implements DownloadFile.Lis
         super(context, attrs);
         initNewRemotePDFViewPager();
     }
+
     private GestureDetector mGestureDetector;
+
     private void initNewRemotePDFViewPager() {
         setPageTransformer(true, new DefaultTransformer());
         initDownloader(new DownloadFileUrlConnectionImpl(context, new Handler(), this));
         mGestureDetector = new GestureDetector(getContext(), new YScrollDetector());
     }
-    class YScrollDetector extends GestureDetector.SimpleOnGestureListener {
-        @Override
-        public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-            Log.e(TAG, "onScroll: "+(Math.abs(distanceY) > Math.abs(distanceX) ));
-            return Math.abs(distanceY) > Math.abs(distanceX);
-        }
-    }
+
     private void initDownloader(DownloadFileUrlConnectionImpl downloadFile) {
         this.downloadFile = downloadFile;
     }
@@ -118,28 +114,6 @@ public class NewRemotePDFViewPager extends ViewPager implements DownloadFile.Lis
         listener.onProgressUpdate(progress, total);
     }
 
-    @Override
-    public boolean onInterceptTouchEvent(MotionEvent ev) {
-        boolean intercept = super.onInterceptTouchEvent(swapEvent(ev));
-        swapEvent(ev);
-        return intercept;
-    }
-
-
-    @Override
-    public boolean onTouchEvent(MotionEvent ev) {
-        return super.onTouchEvent(swapEvent(ev));
-    }
-
-    private MotionEvent swapEvent(MotionEvent event) {
-        float width = getWidth();
-        float height = getHeight();
-        float swappedX = (event.getY() / height) * width;
-        float swappedY = (event.getX() / width) * height;
-        event.setLocation(swappedX, swappedY);
-        return event;
-    }
-
 
     public class DefaultTransformer implements PageTransformer {
         public static final String TAG = "simple";
@@ -178,6 +152,39 @@ public class NewRemotePDFViewPager extends ViewPager implements DownloadFile.Lis
     public void release() {
         if (adapter != null) {
             adapter.close();
+        }
+    }
+
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
+        boolean intercept = super.onInterceptTouchEvent(swapEvent(ev));
+        swapEvent(ev);
+        return intercept;
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent ev) {
+        return super.onTouchEvent(swapEvent(ev));
+    }
+
+    private MotionEvent swapEvent(MotionEvent event) {
+        float width = getWidth();
+        float height = getHeight();
+        float swappedX = (event.getY() / height) * width;
+        float swappedY = (event.getX() / width) * height;
+        event.setLocation(swappedX, swappedY);
+        return event;
+    }
+
+    class YScrollDetector extends GestureDetector.SimpleOnGestureListener {
+        @Override
+        public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+            if (Math.abs(distanceY) > Math.abs(distanceX)) {
+                Log.e(TAG, "垂直滑动: ");
+            } else {
+                Log.e(TAG, "水平滑动: ");
+            }
+            return Math.abs(distanceY) > Math.abs(distanceX);
         }
     }
 }

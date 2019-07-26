@@ -101,7 +101,7 @@ public class ViewPagerRemotePDFActivity extends AppCompatActivity {
                         @Override
                         public void onPageSelected(int position) {
 //                            tvPage.setText(String.format("%d/%d", position + 1, totalPage));
-                            Log.e(TAG, "onPageSelected: "+position );
+//                            Log.e(TAG, "onPageSelected: "+position );
                         }
                     });
                     remotePDFViewPager.start();

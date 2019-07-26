@@ -157,6 +157,11 @@ public class NewRemotePDFViewPager extends ViewPager implements DownloadFile.Lis
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
+        if (mGestureDetector.onTouchEvent(ev)) {
+            getParent().requestDisallowInterceptTouchEvent(false);
+            Log.e(TAG, "捕捉水平滑动: " );
+            return false;
+        }
         boolean intercept = super.onInterceptTouchEvent(swapEvent(ev));
         swapEvent(ev);
         return intercept;
@@ -164,6 +169,11 @@ public class NewRemotePDFViewPager extends ViewPager implements DownloadFile.Lis
 
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
+        if (mGestureDetector.onTouchEvent(ev)) {
+            Log.e(TAG, "捕捉水平滑动: " );
+            getParent().requestDisallowInterceptTouchEvent(false);
+            return false;
+        }
         return super.onTouchEvent(swapEvent(ev));
     }
 
@@ -179,12 +189,12 @@ public class NewRemotePDFViewPager extends ViewPager implements DownloadFile.Lis
     class YScrollDetector extends GestureDetector.SimpleOnGestureListener {
         @Override
         public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-            if (Math.abs(distanceY) > Math.abs(distanceX)) {
-                Log.e(TAG, "垂直滑动: ");
-            } else {
+            if (Math.abs(distanceY) < Math.abs(distanceX)) {
                 Log.e(TAG, "水平滑动: ");
+            } else {
+                Log.e(TAG, "垂直滑动: ");
             }
-            return Math.abs(distanceY) > Math.abs(distanceX);
+            return Math.abs(distanceY) < Math.abs(distanceX);
         }
     }
 }

@@ -6,7 +6,7 @@
 
 
 
-    <android.support.v4.view.ViewPager
+    <com.kingja.pdfsir.MyViewPager
         android:id="@+id/vp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

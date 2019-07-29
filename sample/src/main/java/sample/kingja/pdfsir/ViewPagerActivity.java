@@ -14,6 +14,7 @@ import android.view.ViewParent;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.kingja.pdfsir.MyViewPager;
 import com.kingja.pdfsir.NewRemotePDFViewPager;
 import com.kingja.pdfsir.remote.DownloadFile;
 
@@ -38,7 +39,7 @@ public class ViewPagerActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vp_pdf);
-        ViewPager vp = findViewById(R.id.vp);
+        MyViewPager vp = findViewById(R.id.vp);
         TextView tv_vp_page = findViewById(R.id.tv_vp_page);
         List<String> urlList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
